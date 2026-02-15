@@ -1,0 +1,280 @@
+{
+  "client_info": {
+    "client_key": "retail_company",
+    "client_name": "Retail Company Inc.",
+    "database": "RetailDB",
+    "generation_date": "2025-07-18T13:44:59.763247",
+    "total_tables": 5,
+    "total_columns": 25
+  },
+  "tables": {
+    "dbo.Customers": {
+      "technical_name": "dbo.Customers",
+      "natural_name": "Customers",
+      "description": "Customer information and details",
+      "search_terms": [
+        "customers",
+        "customer",
+        "client",
+        "user",
+        "person"
+      ],
+      "synonyms": [
+        "client",
+        "user",
+        "person"
+      ],
+      "columns": {
+        "CustomerID": {
+          "technical_name": "CustomerID",
+          "natural_name": "Customer ID",
+          "description": "Unique customer identifier (number)",
+          "data_type": "int",
+          "category": "identifier",
+          "examples": [
+            "find customer by id",
+            "customer number",
+            "customer key"
+          ]
+        },
+        "FirstName": {
+          "technical_name": "FirstName",
+          "natural_name": "First Name",
+          "description": "Customer's first name (text)",
+          "data_type": "varchar",
+          "category": "name",
+          "examples": [
+            "customer first name",
+            "given name"
+          ]
+        },
+        "LastName": {
+          "technical_name": "LastName",
+          "natural_name": "Last Name",
+          "description": "Customer's last name (text)",
+          "data_type": "varchar",
+          "category": "name",
+          "examples": [
+            "customer last name",
+            "family name",
+            "surname"
+          ]
+        },
+        "Email": {
+          "technical_name": "Email",
+          "natural_name": "Email",
+          "description": "Customer's email address (text)",
+          "data_type": "varchar",
+          "category": "email",
+          "examples": [
+            "customer email",
+            "email address",
+            "contact email"
+          ]
+        },
+        "CreatedDate": {
+          "technical_name": "CreatedDate",
+          "natural_name": "Created Date",
+          "description": "When customer was created (date/time)",
+          "data_type": "datetime",
+          "category": "datetime",
+          "examples": [
+            "when customer was added",
+            "customer creation date",
+            "registration date"
+          ]
+        }
+      },
+      "primary_keys": [
+        "CustomerID"
+      ],
+      "foreign_keys": [],
+      "row_count": 15000
+    },
+    "dbo.Orders": {
+      "technical_name": "dbo.Orders",
+      "natural_name": "Orders",
+      "description": "Customer orders and purchases",
+      "search_terms": [
+        "orders",
+        "order",
+        "purchase",
+        "transaction",
+        "sale"
+      ],
+      "synonyms": [
+        "purchase",
+        "transaction",
+        "sale"
+      ],
+      "columns": {
+        "OrderID": {
+          "technical_name": "OrderID",
+          "natural_name": "Order ID",
+          "description": "Unique order identifier (number)",
+          "data_type": "int",
+          "category": "identifier",
+          "examples": [
+            "find order by id",
+            "order number"
+          ]
+        },
+        "CustomerID": {
+          "technical_name": "CustomerID",
+          "natural_name": "Customer ID",
+          "description": "Customer who placed the order (number)",
+          "data_type": "int",
+          "category": "reference",
+          "examples": [
+            "which customer placed order",
+            "order customer"
+          ]
+        },
+        "OrderDate": {
+          "technical_name": "OrderDate",
+          "natural_name": "Order Date",
+          "description": "When the order was placed (date/time)",
+          "data_type": "datetime",
+          "category": "datetime",
+          "examples": [
+            "when was order placed",
+            "order date",
+            "purchase date"
+          ]
+        },
+        "TotalAmount": {
+          "technical_name": "TotalAmount",
+          "natural_name": "Total Amount",
+          "description": "Total order amount (money)",
+          "data_type": "decimal",
+          "category": "money",
+          "examples": [
+            "order total",
+            "how much was order",
+            "order amount",
+            "order value"
+          ]
+        }
+      },
+      "primary_keys": [
+        "OrderID"
+      ],
+      "foreign_keys": [
+        {
+          "column": "CustomerID",
+          "referenced_table": "dbo.Customers",
+          "referenced_column": "CustomerID"
+        }
+      ],
+      "row_count": 45000
+    },
+    "dbo.Products": {
+      "technical_name": "dbo.Products",
+      "natural_name": "Products",
+      "description": "Product catalog and information",
+      "search_terms": [
+        "products",
+        "product",
+        "item",
+        "goods",
+        "merchandise"
+      ],
+      "synonyms": [
+        "item",
+        "goods",
+        "service",
+        "merchandise"
+      ],
+      "columns": {
+        "ProductID": {
+          "technical_name": "ProductID",
+          "natural_name": "Product ID",
+          "description": "Unique product identifier (number)",
+          "data_type": "int",
+          "category": "identifier",
+          "examples": [
+            "find product by id",
+            "product number"
+          ]
+        },
+        "ProductName": {
+          "technical_name": "ProductName",
+          "natural_name": "Product Name",
+          "description": "Name of the product (text)",
+          "data_type": "varchar",
+          "category": "name",
+          "examples": [
+            "product name",
+            "what is the product called"
+          ]
+        },
+        "UnitPrice": {
+          "technical_name": "UnitPrice",
+          "natural_name": "Unit Price",
+          "description": "Price per unit of product (money)",
+          "data_type": "decimal",
+          "category": "money",
+          "examples": [
+            "product price",
+            "how much does it cost",
+            "unit price"
+          ]
+        },
+        "Category": {
+          "technical_name": "Category",
+          "natural_name": "Category",
+          "description": "Product category (text)",
+          "data_type": "varchar",
+          "category": "text",
+          "examples": [
+            "product category",
+            "what type of product"
+          ]
+        }
+      },
+      "primary_keys": [
+        "ProductID"
+      ],
+      "foreign_keys": [],
+      "row_count": 2500
+    }
+  },
+  "search_index": {
+    "customer": [
+      "dbo.Customers",
+      "dbo.Orders.CustomerID"
+    ],
+    "order": [
+      "dbo.Orders"
+    ],
+    "product": [
+      "dbo.Products"
+    ],
+    "name": [
+      "dbo.Customers.FirstName",
+      "dbo.Customers.LastName",
+      "dbo.Products.ProductName"
+    ],
+    "price": [
+      "dbo.Products.UnitPrice"
+    ],
+    "amount": [
+      "dbo.Orders.TotalAmount"
+    ],
+    "date": [
+      "dbo.Customers.CreatedDate",
+      "dbo.Orders.OrderDate"
+    ],
+    "email": [
+      "dbo.Customers.Email"
+    ],
+    "category": [
+      "dbo.Products.Category"
+    ]
+  },
+  "metadata": {
+    "version": "1.0",
+    "generator": "QueryMancer Mapping Generator",
+    "schema_extraction_date": "2025-07-18T13:44:59.763268"
+  }
+}
