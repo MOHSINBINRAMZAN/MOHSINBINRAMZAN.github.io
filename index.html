@@ -4,8 +4,9 @@
     <title>Mohsin Bin Ramzan Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Mohsin Bin Ramzan - AI Engineer & Associate Software Engineer. Portfolio showcasing Machine Learning, NLP, Computer Vision, and Backend Development projects.">
     
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -26,9 +27,180 @@
 
 <style>
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+/* ============================================
+   GLOBAL PREMIUM STYLES
+============================================ */
+
+body {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  overflow-x: hidden;
+  background: #0a0a1a;
+  color: #e0e0e0;
+}
+
+::selection {
+  background: rgba(255, 189, 57, 0.3);
+  color: #fff;
+}
+
+/* ============================================
+   PARTICLE CANVAS BACKGROUND
+============================================ */
+
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Gradient mesh overlay */
+.bg-gradient-mesh {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(255, 189, 57, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+}
+
+/* ============================================
+   FLOATING ORB ANIMATIONS
+============================================ */
+
+.floating-orbs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.12;
+  animation: orbFloat 20s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #ffbd39 0%, #f59e0b 100%);
+  top: 10%;
+  left: -5%;
+  animation-duration: 25s;
+}
+
+.orb-2 {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  top: 60%;
+  right: -5%;
+  animation-duration: 30s;
+  animation-delay: -5s;
+}
+
+.orb-3 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  bottom: 5%;
+  left: 30%;
+  animation-duration: 22s;
+  animation-delay: -10s;
+}
+
+.orb-4 {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+  top: 30%;
+  right: 20%;
+  animation-duration: 28s;
+  animation-delay: -15s;
+}
+
+.orb-5 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+  top: 80%;
+  left: 60%;
+  animation-duration: 35s;
+  animation-delay: -8s;
+}
+
+@keyframes orbFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+  75% {
+    transform: translate(40px, 30px) scale(1.05);
+  }
+}
+
+/* ============================================
+   SECTION STYLES
+============================================ */
+
+.ftco-section {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 0;
+}
+
+@media (max-width: 991.98px) {
+  .ftco-section {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .ftco-section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ftco-section {
+    padding: 2.5rem 0;
+  }
+}
+
+/* Section headings */
+.heading-section h2,
+.heading-section .big,
+.heading-section .big-2 {
+  color: #ffffff;
+}
+
+.heading-section p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================
+   ABOUT SECTION
+============================================ */
 
 .about-mf .box-shadow-full {
   padding-top: 4rem;
@@ -97,9 +269,721 @@
   }
 }
 
+/* ============================================
+   RESPONSIVE DESIGN - ALL BREAKPOINTS
+============================================ */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  h1, .h1 { font-size: 1.6rem; }
+  h2, .h2 { font-size: 1.3rem; }
+  h3, .h3 { font-size: 1.1rem; }
+  
+  .about-mf .box-shadow-full {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .container {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  
+  #typing-animation {
+    font-size: 18px;
+  }
+  
+  .big, .big-2 {
+    font-size: 1.6rem !important;
+  }
+  
+  .big-4 {
+    font-size: 1.3rem !important;
+  }
+
+  .hero .text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero .text h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn-primary, .btn-white {
+    padding: 10px 20px !important;
+    font-size: 0.85rem;
+  }
+
+  .counter-wrap .text p .number {
+    font-size: 2rem;
+  }
+
+  .ftco-footer-social li a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .about-info li span:first-child {
+    min-width: 80px;
+  }
+
+  .img-about {
+    min-height: auto !important;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px - 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  h1, .h1 { font-size: 1.9rem; }
+  h2, .h2 { font-size: 1.5rem; }
+  
+  .big, .big-2 {
+    font-size: 2rem !important;
+  }
+
+  #typing-animation {
+    font-size: 22px;
+  }
+}
+
+/* Medium devices (tablets, 768px - 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  h1, .h1 { font-size: 2.2rem; }
+  h2, .h2 { font-size: 1.7rem; }
+}
+
+/* Large devices (desktops, 992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Ultra wide (1400px+) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* ============================================
+   PROJECT CARDS - CSS GRID LAYOUT
+============================================ */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 991.98px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 575.98px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 189, 57, 0.3);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(255, 189, 57, 0.05);
+}
+
+.project-card .card-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card .card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(10, 10, 26, 0.8) 100%);
+}
+
+.project-card .card-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.project-card .card-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .card-body h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  line-height: 1.4;
+}
+
+.project-card .card-body h3 a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-card .card-body h3 a:hover {
+  color: #ffbd39;
+  text-decoration: none;
+}
+
+.project-card .card-body p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+@media (max-width: 575.98px) {
+  .project-card .card-img {
+    height: 180px;
+  }
+  .project-card .card-body {
+    padding: 1.2rem;
+  }
+  .project-card .card-body h3 {
+    font-size: 0.95rem;
+  }
+  .project-card .card-body p {
+    font-size: 0.82rem;
+  }
+}
+
+/* ============================================
+   EXPERIENCE CARDS - PREMIUM DESIGN
+============================================ */
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 575.98px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.exp-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.exp-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #ffbd39 0%, #f59e0b 50%, #d97706 100%);
+  border-radius: 4px 0 0 4px;
+}
+
+.exp-card:hover {
+  transform: translateY(-5px) translateX(3px);
+  border-color: rgba(255, 189, 57, 0.2);
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(255, 189, 57, 0.04);
+}
+
+.exp-card .exp-date {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffbd39;
+  background: rgba(255, 189, 57, 0.1);
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.exp-card .exp-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.exp-card .exp-company {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255, 189, 57, 0.85);
+  margin-bottom: 0.3rem;
+}
+
+.exp-card .exp-location {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 1rem;
+}
+
+.exp-card .exp-desc {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exp-card .exp-desc li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+}
+
+.exp-card .exp-desc li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #ffbd39;
+  font-weight: bold;
+}
+
+@media (max-width: 575.98px) {
+  .exp-card {
+    padding: 1.5rem;
+  }
+  .exp-card .exp-title {
+    font-size: 1.1rem;
+  }
+  .exp-card .exp-desc li {
+    font-size: 0.82rem;
+  }
+}
+
+/* Education cards */
+.edu-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 1.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.edu-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 4px 0 0 4px;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px) translateX(3px);
+  border-color: rgba(99, 102, 241, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.edu-card .edu-date {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #818cf8;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.edu-card .edu-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.edu-card .edu-school {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(129, 140, 248, 0.85);
+  margin-bottom: 0.5rem;
+}
+
+.edu-card .edu-grade {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   SECTION TITLE STYLING
+============================================ */
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title .big {
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.03);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -10px;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #ffbd39, #f59e0b);
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+.section-title p {
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 600px;
+  margin: 1rem auto 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Sub-section titles (Experience, Education) */
+.subsection-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.subsection-title h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.subsection-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 189, 57, 0.3), transparent);
+}
+
+/* ============================================
+   NAVBAR IMPROVEMENTS
+============================================ */
+
+.ftco_navbar {
+  z-index: 100;
+  position: relative;
+}
+
+.navbar-brand {
+  font-weight: 700 !important;
+  font-size: 1.4rem !important;
+}
+
+/* ============================================
+   HERO / HOME SECTION
+============================================ */
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .text h1 span {
+  color: #ffbd39;
+}
+
+/* ============================================
+   CONTACT SECTION
+============================================ */
+
+.contact-section .box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.contact-section .box:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 189, 57, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.contact-section .box h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.contact-section .box p, .contact-section .box p a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-section .box p a:hover {
+  color: #ffbd39;
+  text-decoration: none;
+}
+
+.contact-section .icon span {
+  color: #ffbd39;
+}
+
+/* ============================================
+   COUNTER SECTION
+============================================ */
+
+#section-counter {
+  z-index: 1;
+  position: relative;
+}
+
+.block-18 .text strong {
+  color: #ffffff;
+}
+
+.block-18 .text span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+
+.ftco-footer {
+  background: rgba(10, 10, 26, 0.9) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1;
+  position: relative;
+}
+
+.ftco-footer p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ftco-footer p a {
+  color: #ffbd39;
+}
+
+/* ============================================
+   SOCIAL LINKS
+============================================ */
+
+.ftco-footer-social li a {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7) !important;
+  transition: all 0.3s ease;
+}
+
+.ftco-footer-social li a:hover {
+  background: rgba(255, 189, 57, 0.15) !important;
+  border-color: #ffbd39;
+  color: #ffbd39 !important;
+  transform: translateY(-3px);
+}
+
+.ftco-footer-social .normal-txt {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================
+   BUTTON STYLES
+============================================ */
+
+.btn-primary {
+  background: linear-gradient(135deg, #ffbd39 0%, #f59e0b 100%) !important;
+  border: none !important;
+  color: #0a0a1a !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 30px rgba(255, 189, 57, 0.3) !important;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+}
+
+.btn-white {
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  border-radius: 8px !important;
+}
+
+.btn-white:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: #ffbd39 !important;
+  color: #ffbd39 !important;
+}
+
+/* ============================================
+   ABOUT SECTION DARK THEME ADJUSTMENTS
+============================================ */
+
+.ftco-about .about-info p span,
+.ftco-about .about-info p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ftco-about .title-s {
+  color: #ffbd39;
+}
+
+.ftco-about .about-info li span:first-child {
+  color: #ffbd39;
+  font-weight: 600;
+}
+
+.ftco-about .about-info li span:last-child {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.skill-mf p, .skill-mf span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.skill-mf .pull-right {
+  color: #ffbd39;
+}
+
+.skill-mf .progress {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.skill-mf .progress .progress-bar {
+  background: linear-gradient(90deg, #ffbd39, #f59e0b) !important;
+}
+
+.img-about {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.counter-wrap .text p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.counter-wrap .text .number {
+  color: #ffbd39;
+}
+
+/* ============================================
+   "HIRE ME" / CTA SECTION
+============================================ */
+
+.ftco-hireme {
+  z-index: 1;
+  position: relative;
+}
+
+.ftco-hireme h2, .ftco-hireme h4 {
+  color: #ffffff;
+}
+
+.ftco-hireme h2 span {
+  color: #ffbd39;
+}
+
+/* ============================================
+   DOWNLOAD CV BUTTON
+============================================ */
+
+.cv-btn-wrap {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.cv-btn-wrap .btn-primary {
+  font-size: 1rem;
+  padding: 14px 36px !important;
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS
+============================================ */
+
+a, button {
+  transition: all 0.3s ease !important;
+}
+
+a:hover, a:focus {
+  transition: all 0.3s ease;
+}
 
 /* project image zoom effect */
-
 .zoom-effect {
   overflow: hidden;
   transition: transform 0.3s ease-out;
@@ -109,6 +993,25 @@
   transform: scale(1.1);
 }
 
+/* ============================================
+   ASK/QUESTION SECTION
+============================================ */
+
+.question-section h2 {
+  color: #ffffff;
+}
+
+.question-section h2 span {
+  color: #ffbd39;
+}
+
+/* ============================================
+   LOADER
+============================================ */
+
+#ftco-loader {
+  z-index: 9999;
+}
 
 </style>
 
@@ -116,6 +1019,20 @@
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
+	  <!-- Particle Canvas Background -->
+	  <canvas id="particle-canvas"></canvas>
+	  
+	  <!-- Floating Gradient Orbs -->
+	  <div class="floating-orbs">
+		  <div class="orb orb-1"></div>
+		  <div class="orb orb-2"></div>
+		  <div class="orb orb-3"></div>
+		  <div class="orb orb-4"></div>
+		  <div class="orb orb-5"></div>
+	  </div>
+	  
+	  <!-- Gradient Mesh Overlay -->
+	  <div class="bg-gradient-mesh"></div>
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
@@ -135,9 +1052,10 @@
 	      </div>
 	    </div>
 	  </nav>
+
 	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
+		  <div class="home-slider owl-carousel">
+	       <div class="slider-item">
 	      	<div class="overlay"></div>
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
@@ -187,7 +1105,7 @@
 
 						<br>
 						<br>
-			            <h2>AI Engineer</h2>
+			            <h2>Full stack AI Engineer</h2>
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
 			            <p><a href="https://pk.linkedin.com/in/mohsin-bin-ramzan-702287271" class="btn btn-primary py-3 px-4">Linkedin</a> 
@@ -220,7 +1138,7 @@
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Mohsin Bin Ramzan</span></p>
-										<p><span class="title-s">Job Role: </span> <span>AI Developer</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Full stack AI Engineer</span></p>
 										<p><span class="title-s">Experience: </span> <span>1 Year </span></p>
 										<p><span class="title-s">Address: </span> <span>Rawalpindi, Pakistan</span></p>
 									  </div>
@@ -270,16 +1188,16 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p> AI Engineer with hands-on experience optimizing LLM performance, designing 
+								<p> Full stack AI Engineer with hands-on experience optimizing LLM performance, designing 
 									LangChain-powered data pipelines and implementing Deep Learning and Computer Vision solutions. Proficient 
 									in Python,SQL and end-to-end ML pipeline development for production-ready AI applications..</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>AI ENGINEER</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Machine learning , NLP,  &amp; Computer Vision</span></li>
+									<li class="d-flex"><span>Profile:</span> <span>FULL STACK AI ENGINEER</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Machine learning,LLMs, RAG, Vector Databases , NLP,  &amp; Computer Vision</span></li>
 									<li class="d-flex"><span>Education:</span> <span>Bachelor of Science In Artificial Intelligence</span></li>
 									<li class="d-flex"><span>Language:</span> <span>English, Urdu,Punjabi, Saraiki</span></li>
 									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Pandas </span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Python, SQL, NLP, Computer Vision, Power BI, Langchain </span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Python, SQL, NLP, Computer Vision,Git,Node.js, Typescript, Power BI, Langchain </span></li>
 									<li class="d-flex"><span>Interest:</span> <span>Hiking, Travel Photography, Novels</span></li>
 									
 								</ul>
@@ -315,85 +1233,83 @@
           </div>
         </div>
 
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
+		<!-- Experience Section -->
+		<div class="subsection-title ftco-animate">
+			<h3>💼 Experience</h3>
 		</div>
-		<br>
-		
-		<div class="row">
-				
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">Aug 2024-Sep 2024</span>
-						<h2> Data Administrator Intern</h2>
-						<span class="position">ASKTech Pvt Ltd</span>
-						<p class="mt-4">ASKTech is a data-driven Tracking and solutions company, helping different firms in maintaining and tracking services . 
-							<ul>
-								<li>Performed in-depth market research and analysis for maintaing and updating databases. Resulted in in deoth understanding and improving concepts.</li>
-								<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
-								<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
-							</ul>
-						</p>
-					</div>
 
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">July 2025-Sep 2025</span>
-						<h2>AI Engineer</h2>
-						<span class="position">Target Sysytems, Islamabad</span>
-						<p class="mt-4">TGS, a leading  Software House with over 40K+ professionals globally. 
-							<ul>
-  <li>Act as the bridge between cutting-edge AI research and real-world product solutions.</li>
-  <li>Work with messy, real-life data to train or fine-tune models that deliver value.</li>
-  <li>Collaborate closely with designers and developers to integrate AI into user-facing features.</li>
-  <li>Prototype quickly, then turn promising ideas into reliable, scalable systems.</li>
-  <li>Balance innovation with practicality to ensure AI feels intuitive, safe, and useful.</li>
-  <li>Deliver smarter, more engaging product experiences that solve real problems for people.</li>
-</ul>
-
-						</p>
-					</div>
-
-				</div>
+		<div class="experience-grid">
+			
+			<!-- Card 1: Associate Software Engineer - Red Coast -->
+			<div class="exp-card ftco-animate">
+				<span class="exp-date">Dec 2025 – Present</span>
+				<h4 class="exp-title">Associate Software Engineer</h4>
+				<div class="exp-company">Red Coast</div>
+				<div class="exp-location">📍 Islamabad</div>
+				<ul class="exp-desc">
+					<li>Design, develop, and deploy scalable backend services using Python and FastAPI, contributing to production-grade microservices architecture and high-performance applications.</li>
+					<li>Build and optimize RESTful APIs integrated with Machine Learning models, enabling automated data processing, model inference, and reliable system performance in production environments.</li>
+					<li>Collaborate in Agile cross-functional teams to design system architecture, implement new features, and ensure code quality, documentation, testing, and efficient deployment pipelines.</li>
+				</ul>
 			</div>
 
-		<br>
-		<br>
+			<!-- Card 2: AI Engineer - Target Systems -->
+			<div class="exp-card ftco-animate">
+				<span class="exp-date">July 2025 – Sep 2025</span>
+				<h4 class="exp-title">AI Engineer</h4>
+				<div class="exp-company">Target Systems</div>
+				<div class="exp-location">📍 Islamabad</div>
+				<ul class="exp-desc">
+					<li>Act as the bridge between cutting-edge AI research and real-world product solutions.</li>
+					<li>Work with messy, real-life data to train or fine-tune models that deliver value.</li>
+					<li>Collaborate closely with designers and developers to integrate AI into user-facing features.</li>
+					<li>Prototype quickly, then turn promising ideas into reliable, scalable systems.</li>
+					<li>Balance innovation with practicality to ensure AI feels intuitive, safe, and useful.</li>
+					<li>Deliver smarter, more engaging product experiences that solve real problems for people.</li>
+				</ul>
+			</div>
 
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
+			<!-- Card 3: Data Administrator Intern -->
+			<div class="exp-card ftco-animate">
+				<span class="exp-date">Aug 2024 – Sep 2024</span>
+				<h4 class="exp-title">Data Administrator Intern</h4>
+				<div class="exp-company">ASKTech Pvt Ltd</div>
+				<div class="exp-location">📍 Pakistan</div>
+				<ul class="exp-desc">
+					<li>Performed in-depth market research and analysis for maintaining and updating databases. Resulted in in-depth understanding and improving concepts.</li>
+					<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
+					<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
+				</ul>
+			</div>
+
 		</div>
+
 		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2022-2026</span>
-    					<h2>BS ARTIFICIAL INTELLIGENCE</h2>
-    					<span class="position">NATIONAL UNIVERSITY OF TECHNOLOGY ISLAMABAD</span>
-    					
-    				</div>
-    			</div>
 
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2019-2021</span>
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">ARMY PUBLIC SCHOOLS</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
-				</div>
-    		</div>
+		<!-- Education Section -->
+		<div class="subsection-title ftco-animate">
+			<h3>🎓 Education</h3>
+		</div>
 
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/drive/folders/1zWa5_FUb2DfgqWUb1CC6iqA6hHnXabPF" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
+		<div class="experience-grid">
+			<div class="edu-card ftco-animate">
+				<span class="edu-date">2022 – 2026</span>
+				<h4 class="edu-title">BS Artificial Intelligence</h4>
+				<div class="edu-school">National University of Technology, Islamabad</div>
+			</div>
+
+			<div class="edu-card ftco-animate">
+				<span class="edu-date">2019 – 2021</span>
+				<h4 class="edu-title">Higher Secondary School</h4>
+				<div class="edu-school">Army Public Schools</div>
+				<div class="edu-grade">Grade: First class distinction.</div>
+			</div>
+		</div>
+
+		<div class="cv-btn-wrap ftco-animate">
+			<a href="https://drive.google.com/drive/folders/1zWa5_FUb2DfgqWUb1CC6iqA6hHnXabPF" class="btn btn-primary py-4 px-5">Download CV</a>
+		</div>
+
     	</div>
     </section>
 
@@ -405,128 +1321,104 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">PROJECTS</h1>
             <h2 class="mb-4">PROJECTS</h2>
-            <p>Below are the projects on NLP,SQL,Langchain , Python, Power BI & AI</p>
+            <p>Below are the projects on NLP, SQL, Langchain, Python, Power BI &amp; AI</p>
           </div>
         </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/MOHSINBINRAMZAN/ANPR-automatic-number-plate-recognition-" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpeg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="hhttps://github.com/MOHSINBINRAMZAN/ANPR-automatic-number-plate-recognition-">Automatic NumberPlate Recognition System using YOLO V8</a></h3>
-                <p>Developed a ML model For Automatic Number Plate Recognition Using YOlO v8.</p>
-              </div>
+        <!-- Project Grid -->
+        <div class="project-grid">
+
+          <!-- Project 1 -->
+          <div class="project-card ftco-animate">
+            <a href="https://github.com/MOHSINBINRAMZAN/ANPR-automatic-number-plate-recognition-" class="card-img" style="background-image: url('images/proj_1.jpeg');"></a>
+            <div class="card-body">
+              <h3><a href="https://github.com/MOHSINBINRAMZAN/ANPR-automatic-number-plate-recognition-">Automatic NumberPlate Recognition System using YOLO V8</a></h3>
+              <p>Developed a ML model For Automatic Number Plate Recognition Using YOlO v8.</p>
             </div>
           </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/MOHSINBINRAMZAN/diabetic-data-preprocessing" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpeg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/MOHSINBINRAMZAN/diabetic-data-preprocessing">Data Analysis using Python Project for Beginners</a></h3>
-                <p>Performed exploratory data analysis on diabetic data data using Python to improve the experience.</p>
-              </div>
+          <!-- Project 2 -->
+          <div class="project-card ftco-animate">
+            <a href="https://github.com/MOHSINBINRAMZAN/diabetic-data-preprocessing" class="card-img" style="background-image: url('images/proj_2.jpeg');"></a>
+            <div class="card-body">
+              <h3><a href="https://github.com/MOHSINBINRAMZAN/diabetic-data-preprocessing">Data Analysis using Python Project for Beginners</a></h3>
+              <p>Performed exploratory data analysis on diabetic data using Python to improve the experience.</p>
             </div>
           </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/MOHSINBINRAMZAN/E-commerce-dashboard" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/MOHSINBINRAMZAN/E-commerce-dashboard">Power BI Sales dashboard Project </a></h3>
-                <p>Designed a Power BI dashboard for a Store to track and analyze the online sales data .</p>
-              </div>
+          <!-- Project 3 -->
+          <div class="project-card ftco-animate">
+            <a href="https://github.com/MOHSINBINRAMZAN/E-commerce-dashboard" class="card-img" style="background-image: url('images/proj_3.jpg');"></a>
+            <div class="card-body">
+              <h3><a href="https://github.com/MOHSINBINRAMZAN/E-commerce-dashboard">Power BI Sales Dashboard Project</a></h3>
+              <p>Designed a Power BI dashboard for a Store to track and analyze the online sales data.</p>
             </div>
           </div>
 			
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/MOHSINBINRAMZAN/Predict_Bank_Marketing_Compain_Success" class="block-20 zoom-effect" style="background-image: url('images/bank.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-   
-				  <h3 class="heading"><a href="https://github.com/MOHSINBINRAMZAN/customer-segmentation-for-market-analysis">Customer Segmentation using clustering model</a></h3>
-				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href=""https://github.com/MOHSINBINRAMZAN/Spelling-Corrector-Using-NLP" class="block-20 zoom-effect" style="background-image: url('spelling.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/MOHSINBINRAMZAN/Spelling-Corrector-Using-NLP">Spelling Corrector using NLP</a></h3>
-				  <p>Developed an NLP model that would detect the spelling or typo mistakes &amp; correct them on contextual understanding.</p>
-				</div>
-			  </div>
-			</div>
-			  <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/MOHSINBINRAMZAN/Emotion-Aware-Chatbot" class="block-20 zoom-effect" style="background-image: url('SENTIMENT ANALYSIS.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/MOHSINBINRAMZAN/Emotion-Aware-Chatbot">Emotion Aware ChatBot</a></h3>
-                <p>A chatbot that detects the user's emotion using a fine-tuned BERT model and provides responses. It stores user-specific chat history.</p>
-              </div>
+          <!-- Project 4 -->
+          <div class="project-card ftco-animate">
+            <a href="https://github.com/MOHSINBINRAMZAN/customer-segmentation-for-market-analysis" class="card-img" style="background-image: url('images/bank.jpg');"></a>
+            <div class="card-body">
+              <h3><a href="https://github.com/MOHSINBINRAMZAN/customer-segmentation-for-market-analysis">Customer Segmentation using Clustering Model</a></h3>
+              <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
             </div>
           </div>
-		    <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/MOHSINBINRAMZAN/LMS-using-python-Sqlite" class="block-20 zoom-effect" style="background-image: url('LMS2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/MOHSINBINRAMZAN/LMS-using-python-Sqlite">LMS Using Python</a></h3>
-                <p>A clearning management system using python that contain the features of adding courses,dropping courses, managing courses, time tables etc.</p>
-              </div>
+          <!-- Project 5 -->
+          <div class="project-card ftco-animate">
+            <a href="https://github.com/MOHSINBINRAMZAN/Spelling-Corrector-Using-NLP" class="card-img" style="background-image: url('spelling.jpg');"></a>
+            <div class="card-body">
+              <h3><a href="https://github.com/MOHSINBINRAMZAN/Spelling-Corrector-Using-NLP">Spelling Corrector using NLP</a></h3>
+              <p>Developed an NLP model that would detect the spelling or typo mistakes &amp; correct them on contextual understanding.</p>
             </div>
           </div>
-		    <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/MOHSINBINRAMZAN/X-ray-images-disease-classification" class="block-20 zoom-effect" style="background-image: url('medical-professionals-examining-x-ray.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/MOHSINBINRAMZAN/X-ray-images-disease-classification">X-ray image Disease</a></h3>
-                <p>A model that detects the disease or classify it using a Computer Vision model and provides Results.</p>
-              </div>
+          <!-- Project 6 -->
+          <div class="project-card ftco-animate">
+            <a href="https://github.com/MOHSINBINRAMZAN/Emotion-Aware-Chatbot" class="card-img" style="background-image: url('SENTIMENT ANALYSIS.jpg');"></a>
+            <div class="card-body">
+              <h3><a href="https://github.com/MOHSINBINRAMZAN/Emotion-Aware-Chatbot">Emotion Aware ChatBot</a></h3>
+              <p>A chatbot that detects the user's emotion using a fine-tuned BERT model and provides responses. It stores user-specific chat history.</p>
             </div>
           </div>
+
+          <!-- Project 7 -->
+          <div class="project-card ftco-animate">
+            <a href="https://github.com/MOHSINBINRAMZAN/LMS-using-python-Sqlite" class="card-img" style="background-image: url('LMS2.jpg');"></a>
+            <div class="card-body">
+              <h3><a href="https://github.com/MOHSINBINRAMZAN/LMS-using-python-Sqlite">LMS Using Python</a></h3>
+              <p>A learning management system using Python that contains the features of adding courses, dropping courses, managing courses, time tables etc.</p>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="project-card ftco-animate">
+            <a href="https://github.com/MOHSINBINRAMZAN/X-ray-images-disease-classification" class="card-img" style="background-image: url('medical-professionals-examining-x-ray.jpg');"></a>
+            <div class="card-body">
+              <h3><a href="https://github.com/MOHSINBINRAMZAN/X-ray-images-disease-classification">X-ray Image Disease Classification</a></h3>
+              <p>A model that detects the disease or classifies it using a Computer Vision model and provides results.</p>
+            </div>
+          </div>
+
+          <!-- Project 9 -->
+          <div class="project-card ftco-animate">
+            <a href="https://github.com/MOHSINBINRAMZAN/Fake-News-Detection-using-NLP-main" class="card-img" style="background-image: url('images/fake news.jpg');"></a>
+            <div class="card-body">
+              <h3><a href="https://github.com/MOHSINBINRAMZAN/Fake-News-Detection-using-NLP-main">Fake News Detection Using NLP</a></h3>
+              <p>This project focuses on detecting fake news articles using Natural Language Processing (NLP) techniques. Includes training a machine learning model and building a robust NLP pipeline.</p>
+            </div>
+          </div>
+
+          <!-- Project 10 -->
+          <div class="project-card ftco-animate">
+            <a href="https://github.com/MOHSINBINRAMZAN/Query-Mancer-Main" class="card-img" style="background-image: url('images/proj_5.jpg');"></a>
+            <div class="card-body">
+              <h3><a href="https://github.com/MOHSINBINRAMZAN/QueryMancer--FYP">Query-Mancer - AI Wizard For Smart Databases</a></h3>
+              <p>Developed a purely local hosted AI agent using LLM and RAG to take Natural Language input and convert it to SQL queries with schema validation and SQL injection prevention.</p>
+            </div>
+          </div>
+
         </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/MOHSINBINRAMZAN/Fake-News-Detection-using-NLP-main" class="block-20 zoom-effect" style="background-image: url('images/fake news.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/MOHSINBINRAMZAN/Fake-News-Detection-using-NLP-mainN">Fake News detection Using NLP</a></h3>
-				  <p>This project focuses on detecting fake news articles using Natural Language Processing (NLP) techniques. With the increasing prevalence of misinformation, automated fake news detection has become a critical application of AI in the modern world.
-					  it includes training a machine learning model on news datasets, building a robust NLP pipeline, and creating a web application for user interaction..</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/MOHSINBINRAMZAN/Query-Mancer-Main" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/MOHSINBINRAMZAN/QueryMancer--FYP">Query-Mancer- Ai Wizard For Smart Databases</a></h3>
-				  <p>Developed a purely local hosted Ai agent that using LLM and RAG to take Natural Language input and conert it to a SQL Query after validating execute that against the connected databased after scehma validation
-					  while preventing sql injection operations and any external API calling.</p>
-				</div>
-			  </div>
-			</div>
-		 </div> -->
 	  </div>
     </section>
 
@@ -620,7 +1512,7 @@
           			<span class="icon-paper-plane"></span>
           		</div>
           		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">mohsinramzan248@gmail.com</a></p>
+	            <p><a href="mailto:mohsinramzan248@gmail.com">mohsinramzan248@gmail.com</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -638,7 +1530,7 @@
 			<br>
 			<br>
 			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
+				<div class="col-md-7 ftco-animate text-center question-section">
 					<h2>Have a <span>Question?</span> 
 						<a href="mailto:mohsinramzan248@gmail.com" class="btn btn-primary py-3 px-5">Email Us</a>
 					</h2>
@@ -694,7 +1586,157 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+  <!-- ============================
+       PARTICLE ANIMATION SCRIPT
+  ============================ -->
+  <script>
+  (function() {
+    const canvas = document.getElementById('particle-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    
+    let width, height, particles, animationId;
+    const particleCount = window.innerWidth < 768 ? 40 : 80;
+    const connectionDistance = 150;
+    const mouseRadius = 200;
+    let mouse = { x: null, y: null };
+    
+    // Color palette - warm golds and cool purples
+    const colors = [
+      'rgba(255, 189, 57, ',   // Gold
+      'rgba(99, 102, 241, ',   // Indigo
+      'rgba(16, 185, 129, ',   // Emerald
+      'rgba(236, 72, 153, ',   // Pink
+      'rgba(6, 182, 212, ',    // Cyan
+      'rgba(245, 158, 11, ',   // Amber
+    ];
+    
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+        this.opacity = Math.random() * 0.5 + 0.1;
+        this.pulseSpeed = Math.random() * 0.02 + 0.005;
+        this.pulseOffset = Math.random() * Math.PI * 2;
+      }
+      
+      update(time) {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        
+        // Pulse effect
+        this.currentOpacity = this.opacity + Math.sin(time * this.pulseSpeed + this.pulseOffset) * 0.1;
+        
+        // Wrap around edges
+        if (this.x > width + 10) this.x = -10;
+        if (this.x < -10) this.x = width + 10;
+        if (this.y > height + 10) this.y = -10;
+        if (this.y < -10) this.y = height + 10;
+        
+        // Mouse interaction - gentle repulsion
+        if (mouse.x !== null && mouse.y !== null) {
+          const dx = this.x - mouse.x;
+          const dy = this.y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < mouseRadius) {
+            const force = (mouseRadius - dist) / mouseRadius * 0.5;
+            this.x += (dx / dist) * force;
+            this.y += (dy / dist) * force;
+          }
+        }
+      }
+      
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color + this.currentOpacity + ')';
+        ctx.fill();
+        
+        // Glow effect
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);
+        ctx.fillStyle = this.color + (this.currentOpacity * 0.15) + ')';
+        ctx.fill();
+      }
+    }
+    
+    function init() {
+      particles = [];
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+    
+    function drawConnections() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          
+          if (dist < connectionDistance) {
+            const opacity = (1 - dist / connectionDistance) * 0.12;
+            ctx.beginPath();
+            ctx.strokeStyle = 'rgba(255, 189, 57, ' + opacity + ')';
+            ctx.lineWidth = 0.5;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+    
+    function animate(time) {
+      ctx.clearRect(0, 0, width, height);
+      
+      particles.forEach(p => {
+        p.update(time);
+        p.draw();
+      });
+      
+      drawConnections();
+      
+      animationId = requestAnimationFrame(animate);
+    }
+    
+    // Event listeners
+    window.addEventListener('resize', () => {
+      resize();
+    });
+    
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+    
+    window.addEventListener('mouseleave', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+    
+    // Reduce particles on mobile for performance
+    window.addEventListener('touchstart', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+    
+    // Initialize
+    resize();
+    init();
+    animate(0);
+  })();
+  </script>
     
   </body>
 </html>
-
