@@ -1,0 +1,17 @@
+# QueryMancer Requirements
+# Python dependencies for the automated mapping generation system
+
+# Database connectivity
+pyodbc>=4.0.35
+
+# Data processing and utilities  
+dataclasses>=0.6; python_version < "3.7"
+
+# Optional: Enhanced text processing (can be added later)
+# nltk>=3.8
+# spacy>=3.4.0
+
+# Development dependencies (optional)
+# pytest>=7.0.0
+# black>=22.0.0
+# flake8>=5.0.0
