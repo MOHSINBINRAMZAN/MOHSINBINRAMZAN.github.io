@@ -1017,6 +1017,79 @@ a:hover, a:focus {
   z-index: 9999;
 }
 
+
+/* Portrait beside the animated introduction; stacked on smaller screens. */
+#home-section .slider-text {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between !important;
+  height: auto !important;
+  min-height: 750px;
+}
+#home-section .slider-text .hero-intro {
+  position: relative;
+  inset: auto;
+  width: 54%;
+  flex: 0 0 54%;
+  padding: 100px 20px 60px 0;
+  margin: 0;
+  z-index: 2;
+}
+#home-section .slider-text .hero-intro .text {
+  position: relative;
+  inset: auto;
+  transform: none;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+#home-section .slider-text .hero-portrait {
+  position: relative;
+  width: 44%;
+  flex: 0 0 44%;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  pointer-events: none;
+}
+#home-section .hero-portrait img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 660px;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 0 32px rgba(255, 189, 57, 0.12));
+}
+@media (max-width: 991.98px) {
+  #home-section .slider-text {
+    flex-direction: column;
+    min-height: 0;
+    padding-top: 100px;
+    text-align: center;
+  }
+  #home-section .slider-text .hero-intro {
+    width: 100%;
+    flex: 0 0 auto;
+    padding: 28px 0 30px;
+  }
+  #home-section .slider-text .hero-portrait {
+    width: 100%;
+    flex: 0 0 auto;
+    order: 2;
+    align-self: center;
+  }
+  #home-section .hero-portrait img {
+    max-height: 460px;
+    max-width: 90%;
+  }
+}
+@media (max-width: 575.98px) {
+  #home-section .hero-portrait img { max-height: 380px; }
+}
+
 </style>
 
 
@@ -1063,10 +1136,10 @@ a:hover, a:focus {
 	      	<div class="overlay"></div>
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url();">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+	          	<div class="one-third order-md-last hero-portrait">
+                  <img src="images/mohsin-hero-transparent.png" alt="Mohsin Bin Ramzan wearing a black suit" fetchpriority="high" decoding="async">
+                </div>
+		          <div class="one-forth d-flex align-items-center ftco-animate hero-intro">
 		          	<div class="text">
 		          		<span class="subheading">Hey!</span>
 			            <h1 class="mb-4 mt-3">I'm <span>Mohsin Bin Ramzan</span></h1>
@@ -1109,7 +1182,7 @@ a:hover, a:focus {
 
 						<br>
 						<br>
-			            <h2>Full stack AI Engineer</h2>
+			            <h2>AI Engineer</h2>
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 1.5 years of experience</h2> -->
 						<!-- <br> -->
 			            <p><a href="https://pk.linkedin.com/in/mohsin-bin-ramzan-702287271" class="btn btn-primary py-3 px-4">Linkedin</a> 
@@ -1142,7 +1215,7 @@ a:hover, a:focus {
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Mohsin Bin Ramzan</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Full stack AI Engineer</span></p>
+										<p><span class="title-s">Job Role: </span> <span>AI Engineer</span></p>
 										<p><span class="title-s">Experience: </span> <span>1.5 Year </span></p>
 										<p><span class="title-s">Address: </span> <span>Rawalpindi, Pakistan</span></p>
 									  </div>
@@ -1202,11 +1275,11 @@ a:hover, a:focus {
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p> Full stack AI Engineer with hands-on experience optimizing LLM performance, designing 
+								<p> AI Engineer with hands-on experience optimizing LLM performance, designing 
 									LangChain-powered data pipelines and implementing Deep Learning and Computer Vision solutions. Proficient 
 									in Python,SQL and end-to-end ML pipeline development for production-ready AI applications..</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>FULL STACK AI ENGINEER</span></li>
+									<li class="d-flex"><span>Profile:</span> <span>AI Engineer</span></li>
 									<li class="d-flex"><span>Domain:</span> <span>Machine learning,LLMs, RAG, Vector Databases , NLP,  &amp; Computer Vision</span></li>
 									<li class="d-flex"><span>Education:</span> <span>Bachelor of Science In Artificial Intelligence</span></li>
 									<li class="d-flex"><span>Language:</span> <span>English, Urdu,Punjabi, Saraiki</span></li>
@@ -1253,49 +1326,29 @@ a:hover, a:focus {
 		</div>
 
 		<div class="experience-grid">
-			
-			<!-- Card 1: Associate Software Engineer - Red Coast -->
 			<div class="exp-card ftco-animate">
-				<span class="exp-date">Dec 2025 – May 2026</span>
+				<span class="exp-date">January 2026 – Present</span>
 				<h4 class="exp-title">Associate Software Engineer</h4>
+				<div class="exp-company">Selteq Solutions</div>
+				<div class="exp-location">📍 Islamabad, Pakistan</div>
+				<ul class="exp-desc">
+					<li>Develop and maintain Python backend services and React/TypeScript interfaces within a microservices architecture supporting enterprise ERP systems.</li>
+					<li>Design, build and consume RESTful APIs, integrating application services with SQL databases for reliable, scalable data processing.</li>
+					<li>Work in Agile/Scrum sprints on feature delivery, code reviews, testing and technical documentation using Git and Docker.</li>
+				</ul>
+			</div>
+
+			<div class="exp-card ftco-animate">
+				<span class="exp-date">June 2025 – December 2025</span>
+				<h4 class="exp-title">Software Trainee</h4>
 				<div class="exp-company">Red Coast</div>
-				<div class="exp-location">📍 Islamabad</div>
+				<div class="exp-location">📍 Islamabad, Pakistan</div>
 				<ul class="exp-desc">
-					<li>Design, develop, and deploy scalable backend services using Python and FastAPI, contributing to production-grade microservices architecture and high-performance applications.</li>
-					<li>Build and optimize RESTful APIs integrated with Machine Learning models, enabling automated data processing, model inference, and reliable system performance in production environments.</li>
-					<li>Collaborate in Agile cross-functional teams to design system architecture, implement new features, and ensure code quality, documentation, testing, and efficient deployment pipelines.</li>
+					<li>Built, optimized and deployed machine learning models for automated data processing and real-time inference, maintaining reliable performance in production.</li>
+					<li>Designed and developed scalable Python backend services in a production microservices architecture powering high-performance AI applications.</li>
+					<li>Integrated ML models into production systems, exposing model capabilities through REST APIs and connecting them to front-end applications.</li>
 				</ul>
 			</div>
-
-			<!-- Card 2: AI Engineer - Target Systems -->
-			<div class="exp-card ftco-animate">
-				<span class="exp-date">July 2025 – Sep 2025</span>
-				<h4 class="exp-title">AI Engineer</h4>
-				<div class="exp-company">Target Systems</div>
-				<div class="exp-location">📍 Islamabad</div>
-				<ul class="exp-desc">
-					<li>Act as the bridge between cutting-edge AI research and real-world product solutions.</li>
-					<li>Work with messy, real-life data to train or fine-tune models that deliver value.</li>
-					<li>Collaborate closely with designers and developers to integrate AI into user-facing features.</li>
-					<li>Prototype quickly, then turn promising ideas into reliable, scalable systems.</li>
-					<li>Balance innovation with practicality to ensure AI feels intuitive, safe, and useful.</li>
-					<li>Deliver smarter, more engaging product experiences that solve real problems for people.</li>
-				</ul>
-			</div>
-
-			<!-- Card 3: Data Administrator Intern -->
-			<div class="exp-card ftco-animate">
-				<span class="exp-date">Aug 2024 – Sep 2024</span>
-				<h4 class="exp-title">Data Administrator Intern</h4>
-				<div class="exp-company">ASKTech Pvt Ltd</div>
-				<div class="exp-location">📍 Pakistan</div>
-				<ul class="exp-desc">
-					<li>Performed in-depth market research and analysis for maintaining and updating databases. Resulted in in-depth understanding and improving concepts.</li>
-					<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
-					<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
-				</ul>
-			</div>
-
 		</div>
 
 		<br>
