@@ -1,0 +1,123 @@
+{
+  "client_info": {
+    "client_key": "sample_client",
+    "client_name": "Sample Client",
+    "database": "SampleDB",
+    "generation_date": "2025-07-18T13:44:59.762935",
+    "total_tables": 2,
+    "total_columns": 8
+  },
+  "tables": {
+    "dbo.Customers": {
+      "technical_name": "dbo.Customers",
+      "natural_name": "Customers",
+      "description": "Data from the Customers table",
+      "search_terms": [
+        "customers",
+        "customer",
+        "client",
+        "user"
+      ],
+      "synonyms": [
+        "client",
+        "user",
+        "person"
+      ],
+      "columns": {
+        "CustomerID": {
+          "technical_name": "CustomerID",
+          "natural_name": "Customer ID",
+          "description": "Customer ID from Customers (number)",
+          "data_type": "int",
+          "search_terms": [
+            "customer id",
+            "id",
+            "identifier",
+            "key"
+          ],
+          "synonyms": [
+            "identifier",
+            "key",
+            "number"
+          ],
+          "category": "identifier",
+          "examples": [
+            "find by customer id",
+            "get customer id",
+            "show customer id"
+          ],
+          "metadata": {
+            "max_length": null,
+            "is_nullable": false,
+            "default_value": null,
+            "is_primary_key": true,
+            "is_foreign_key": false,
+            "referenced_table": null,
+            "referenced_column": null
+          }
+        },
+        "CustomerName": {
+          "technical_name": "CustomerName",
+          "natural_name": "Customer Name",
+          "description": "Customer Name from Customers (text)",
+          "data_type": "varchar",
+          "search_terms": [
+            "customer name",
+            "name",
+            "title"
+          ],
+          "synonyms": [
+            "title",
+            "label",
+            "description"
+          ],
+          "category": "name",
+          "examples": [
+            "find by customer name",
+            "search customer name",
+            "show customer name"
+          ],
+          "metadata": {
+            "max_length": 100,
+            "is_nullable": false,
+            "default_value": null,
+            "is_primary_key": false,
+            "is_foreign_key": false,
+            "referenced_table": null,
+            "referenced_column": null
+          }
+        }
+      },
+      "primary_keys": [
+        "CustomerID"
+      ],
+      "foreign_keys": [],
+      "row_count": 1000,
+      "metadata": {
+        "schema": "dbo",
+        "table_name": "Customers",
+        "column_count": 2,
+        "has_primary_key": true,
+        "has_foreign_keys": false
+      }
+    }
+  },
+  "search_index": {
+    "customer": [
+      "dbo.Customers",
+      "dbo.Customers.CustomerID",
+      "dbo.Customers.CustomerName"
+    ],
+    "name": [
+      "dbo.Customers.CustomerName"
+    ],
+    "id": [
+      "dbo.Customers.CustomerID"
+    ]
+  },
+  "metadata": {
+    "version": "1.0",
+    "generator": "QueryMancer Mapping Generator",
+    "schema_extraction_date": "2025-07-18T13:44:59.762941"
+  }
+}
